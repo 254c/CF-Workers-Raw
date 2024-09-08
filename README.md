@@ -7,7 +7,7 @@
 - 但是，你不想在URL中直接暴露你的GitHub令牌，因为这可能会被他人滥用。
 
 我们的解决方案是使用Cloudflare Workers作为中间层，它替你安全地处理身份验证，让你可以安全地访问私有文件。
-## 如何使用？
+## 如何使用？ [视频教程](https://www.youtube.com/watch?v=T-bK5o96lqI)
 假设你的Cloudflare Workers项目部署在`raw.090227.xyz`，
 
 而你要访问的私有文件是`https://raw.githubusercontent.com/cmliu/CF-Workers-Raw/main/_worker.js`。
@@ -99,14 +99,14 @@ GitHub个人访问令牌可以在GitHub设置中的"Developer settings" > "Perso
 # 变量说明
 | 变量名 | 示例 | 必填 | 备注 | 
 |--|--|--|--|
-| GH_TOKEN| ghp_CgmlL2b5J8Z1soNUquc0bZblkbO3gKxhn13t| ❌| 您的GitHub令牌 **token**|
-| TOKEN| nicaibudaowo | ❌| `GH_TOKEN`和`TOKEN`同时存在的时候会作为访问鉴权，单独赋值时的效果与`GH_TOKEN`相同|
-| GH_NAME| cmliu | ❌| 你的GitHub用户名 |
-| GH_REPO| CF-Workers-Raw | ❌| 你的GitHub仓库(必须设置`GH_NAME`变量为前提) |
-| GH_BRANCH| main | ❌| 你的GitHub仓库(必须设置`GH_NAME`和`GH_REPO`变量为前提) |
-| URL302 | https://t.me/CMLiussss |❌| 主页302跳转 |
-| URL | https://github.com/cmliu/CF-Workers-Raw/blob/main/README.md |❌| 主页伪装 |
-| ERROR | 无法获取文件，检查路径或TOKEN是否正确。 |❌| 自定义错误提示 |
+| GH_TOKEN| `ghp_CgmlL2b5J8Z1soNUquc0bZblkbO3gKxhn13t`| ❌| 您的GitHub令牌 **token**|
+| TOKEN| `nicaibudaowo` | ❌| `GH_TOKEN`和`TOKEN`同时存在的时候会作为访问鉴权，单独赋值时的效果与`GH_TOKEN`相同|
+| GH_NAME| `cmliu` | ❌| 你的GitHub用户名 |
+| GH_REPO| `CF-Workers-Raw` | ❌| 你的GitHub仓库(必须设置`GH_NAME`变量为前提) |
+| GH_BRANCH| `main` | ❌| 你的GitHub仓库(必须设置`GH_NAME`和`GH_REPO`变量为前提) |
+| URL302 | `https://t.me/CMLiussss` |❌| 主页302跳转 |
+| URL | `https://github.com/cmliu/CF-Workers-Raw/blob/main/README.md` |❌| 主页伪装 |
+| ERROR | `无法获取文件，检查路径或TOKEN是否正确。` |❌| 自定义错误提示 |
 
 # 感谢
 我自己的脑洞、ChatGPT
